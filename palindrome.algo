@@ -1,0 +1,22 @@
+ALGORITHM is palindrome
+VAR
+    str : STRING="";
+    i:INTEGER;
+    r:BOOLEAN;
+BEGIN
+    read(str)
+    IF ((str="")OR(str.length=1)) THEN
+        r=true;
+    END_IF
+    FOR i FROM 0 TO str.length-1 STEP 0  DO
+        FOR j FROM str.length-1 TO 0 STEP -1 DO
+        IF (str(i)=str(j)) THEN
+            i=i+1;
+            j=j-1;
+            r=true;
+        ELSE
+        r=false;
+        END_IF
+        END_FOR
+    END_FOR
+END
